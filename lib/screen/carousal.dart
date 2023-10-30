@@ -125,7 +125,7 @@ class _CarousalState extends State<Carousal> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const Drum7(),
+                            builder: (context) => Drum7(),
                           ));
                     },
                   ),
