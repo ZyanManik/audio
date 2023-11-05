@@ -3,9 +3,6 @@ import 'package:audio/widgets.dart/drum2.dart';
 import 'package:audio/widgets.dart/drum3.dart';
 import 'package:audio/widgets.dart/drum4.dart';
 import 'package:audio/widgets.dart/drum5.dart';
-import 'package:audio/widgets.dart/drum6.dart';
-import 'package:audio/widgets.dart/drum7.dart';
-import 'package:audio/widgets.dart/drum8.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -57,26 +54,13 @@ class _CarousalState extends State<Carousal> {
                   ),
                   GestureDetector(
                     child: const ContainerDesign(
-                      contanierclr: Colors.blue,
-                    ),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const Drum2(),
-                        ),
-                      );
-                    },
-                  ),
-                  GestureDetector(
-                    child: const ContainerDesign(
                       contanierclr: Colors.red,
                     ),
                     onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const Drum3(),
+                          builder: (context) => Drum2(),
                         ),
                       );
                     },
@@ -89,7 +73,7 @@ class _CarousalState extends State<Carousal> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const Drum4(),
+                            builder: (context) => Drum3(),
                           ));
                     },
                   ),
@@ -101,7 +85,7 @@ class _CarousalState extends State<Carousal> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const Drum5(),
+                            builder: (context) => Drum4(),
                           ));
                     },
                   ),
@@ -113,31 +97,7 @@ class _CarousalState extends State<Carousal> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const Drum6(),
-                          ));
-                    },
-                  ),
-                  GestureDetector(
-                    child: const ContainerDesign(
-                      contanierclr: Colors.grey,
-                    ),
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => Drum7(),
-                          ));
-                    },
-                  ),
-                  GestureDetector(
-                    child: const ContainerDesign(
-                      contanierclr: Colors.brown,
-                    ),
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const Drum8(),
+                            builder: (context) => Drum5(),
                           ));
                     },
                   ),
