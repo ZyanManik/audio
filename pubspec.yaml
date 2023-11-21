@@ -38,6 +38,8 @@ dependencies:
   audioplayers: ^5.2.0
   carousel_slider: ^4.2.1
   google_nav_bar: ^5.0.6
+  smooth_page_indicator: ^1.1.0
+  readmore: ^2.2.0
 
 
 dev_dependencies:

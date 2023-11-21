@@ -21,6 +21,7 @@ class _BottomNavigationBarExampleState
     Settings()
   ];
 
+  // ignore: unused_element
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -30,23 +31,23 @@ class _BottomNavigationBarExampleState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 30, 25, 25),
+      backgroundColor: const Color.fromARGB(255, 103, 102, 102),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(35), topRight: Radius.circular(35)),
-          color: Color.fromARGB(255, 1, 0, 0),
+              topLeft: Radius.circular(20), topRight: Radius.circular(25)),
+          color: Color.fromARGB(255, 15, 14, 14),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
           child: GNav(
-            backgroundColor: const Color.fromARGB(255, 1, 0, 0),
-            color: Colors.white10,
-            activeColor: Colors.white,
-            tabBackgroundColor: const Color.fromARGB(248, 47, 43, 43),
+            backgroundColor: const Color.fromARGB(255, 15, 14, 14),
+            color: Colors.white,
+            activeColor: const Color.fromARGB(255, 255, 17, 1),
+            tabBackgroundColor: const Color.fromARGB(255, 0, 0, 0),
             padding: const EdgeInsets.all(6),
             onTabChange: (value) {
               setState(() {
@@ -55,22 +56,28 @@ class _BottomNavigationBarExampleState
             },
             tabs: const [
               GButton(
-                gap: 8,
+                gap: 6,
                 icon: Icons.home_max_outlined,
+                iconSize: 25,
                 text: 'Home',
                 textColor: Colors.white,
+                textSize: 13,
               ),
               GButton(
-                gap: 8,
-                icon: Icons.music_note_outlined,
-                text: 'Music',
+                gap: 6,
+                iconSize: 25,
+                icon: Icons.audio_file_outlined,
+                text: 'Audio',
                 textColor: Colors.white,
+                textSize: 13,
               ),
               GButton(
-                gap: 8,
+                gap: 6,
+                iconSize: 25,
                 icon: Icons.settings,
                 text: 'Settings',
                 textColor: Colors.white,
+                textSize: 13,
               ),
             ],
           ),

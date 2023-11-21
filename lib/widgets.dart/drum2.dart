@@ -45,11 +45,26 @@ class Drum2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 30, 25, 25),
+      backgroundColor: Colors.black,
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Drum2'),
-        backgroundColor: const Color.fromARGB(255, 245, 81, 6).withOpacity(0.3),
+        title: const Row(
+          children: [
+            Text(
+              'Drum',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+            Text(
+              '_2',
+              style: TextStyle(
+                color: Color.fromARGB(255, 255, 17, 1),
+              ),
+            ),
+          ],
+        ),
+        backgroundColor: const Color.fromARGB(255, 21, 21, 21),
         leading: InkWell(
           child: const Icon(Icons.arrow_back_ios),
           onTap: () {

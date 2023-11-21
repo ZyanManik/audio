@@ -10,11 +10,21 @@ class Drum1 extends StatefulWidget {
 
 class _Drum1State extends State<Drum1> {
   List clrlist = [
+    // {
+    //   "color": const RadialGradient(
+    //     radius: 3.0,
+    //     center: Alignment.center,
+    //     colors: [
+    //       Color.fromARGB(255, 255, 65, 2),
+    //       Color.fromARGB(255, 89, 7, 7),
+    //       Colors.black,
+    //       Colors.orange,
+    //       Colors.deepOrangeAccent
+    //     ],
+    //   ),
+    // },
     {
-      "color": const Color.fromARGB(255, 220, 166, 6),
-    },
-    {
-      "color": const Color.fromARGB(255, 200, 16, 3),
+      "color": Color.fromARGB(255, 226, 219, 219),
     },
     {
       "color": const Color.fromARGB(255, 0, 105, 190),
@@ -40,24 +50,33 @@ class _Drum1State extends State<Drum1> {
     {
       "color": const Color.fromARGB(255, 12, 141, 141),
     },
-    {
-      "color": const Color.fromARGB(255, 19, 41, 165),
-    },
-    {
-      "color": const Color.fromARGB(255, 201, 69, 21),
-    },
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 30, 25, 25),
+      backgroundColor: const Color.fromARGB(255, 103, 102, 102),
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Drum1'),
-        backgroundColor: const Color.fromARGB(255, 245, 81, 6).withOpacity(0.3),
+        title: const Row(
+          children: [
+            Text(
+              'Drum',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+            Text(
+              '_1',
+              style: TextStyle(
+                color: Color.fromARGB(255, 255, 17, 1),
+              ),
+            ),
+          ],
+        ),
+        backgroundColor: const Color.fromARGB(255, 74, 73, 73),
         leading: InkWell(
-          child: const Icon(Icons.arrow_back_ios),
+          child: const Icon(Icons.arrow_back_ios_new),
           onTap: () {
             Navigator.pop(context);
           },
@@ -74,14 +93,15 @@ class _Drum1State extends State<Drum1> {
         itemBuilder: (context, index) => SizedBox(
           child: MaterialButton(
             onPressed: () {},
-            splashColor: Colors.grey,
+            splashColor: Colors.red,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             padding: const EdgeInsets.all(0.0),
             child: Ink(
               decoration: BoxDecoration(
                   color: clrlist[index]["color"],
-                  borderRadius: BorderRadius.circular(10)),
+                  //gradient: clrlist[index]['color'],
+                  borderRadius: BorderRadius.circular(20)),
               child: Container(
                 constraints: const BoxConstraints(
                     minWidth: 88.0,

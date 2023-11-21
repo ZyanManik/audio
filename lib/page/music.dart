@@ -6,17 +6,22 @@ class Music extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 30, 25, 25),
+      backgroundColor: const Color.fromARGB(255, 143, 143, 143),
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 245, 81, 6).withOpacity(0.3),
+        backgroundColor: const Color.fromARGB(255, 78, 78, 78),
         elevation: 0.0,
-        centerTitle: true,
-        title: const Text(
-          'Music',
-          style: TextStyle(
-            fontSize: 35,
-            color: Color.fromARGB(255, 255, 255, 255),
-          ),
+        title: const Row(
+          children: [
+            Text(
+              'Musical',
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            ),
+            Text(
+              '_Pad',
+              style: TextStyle(
+                  color: Color.fromARGB(255, 255, 17, 1), fontSize: 20),
+            ),
+          ],
         ),
       ),
     );
