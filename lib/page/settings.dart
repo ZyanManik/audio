@@ -6,61 +6,64 @@ class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 143, 143, 143),
+      backgroundColor: const Color.fromARGB(255, 30, 29, 29),
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 78, 78, 78),
+        backgroundColor: const Color.fromARGB(255, 35, 60, 80),
         elevation: 0.0,
         title: const Row(
           children: [
-            Text(
-              'Musical',
-              style: TextStyle(color: Colors.white, fontSize: 20),
-            ),
-            Text(
-              '_Pad',
-              style: TextStyle(
-                  color: Color.fromARGB(255, 255, 17, 1), fontSize: 20),
-            ),
+            // Text(
+            //   'Musical',
+            //   style: TextStyle(color: Colors.white, fontSize: 20),
+            // ),
+            // Text(
+            //   '_Pad',
+            //   style: TextStyle(
+            //       color: Color.fromARGB(255, 255, 17, 1), fontSize: 20),
+            // ),
           ],
         ),
       ),
       body: Padding(
         padding:
-            const EdgeInsets.only(top: 35, bottom: 20, left: 18, right: 18),
+            const EdgeInsets.only(top: 20, bottom: 20, left: 18, right: 18),
         child: Column(
           children: [
-            Container(
-              width: MediaQuery.sizeOf(context).width,
-              height: 65,
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 78, 78, 78),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    width: 25,
-                  ),
-                  Icon(Icons.share_outlined, color: Colors.white, size: 25),
-                  SizedBox(
-                    width: 9,
-                  ),
-                  Text(
-                    'Share App',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                  ),
-                ],
-              ),
-            ),
+            // Container(
+            //   width: MediaQuery.sizeOf(context).width,
+            //   height: 65,
+            //   decoration: BoxDecoration(
+            //     color: const Color.fromARGB(255, 109, 104, 104),
+            //     borderRadius: BorderRadius.circular(0),
+            //   ),
+            //   child: const Row(
+            //     mainAxisAlignment: MainAxisAlignment.start,
+            //     children: [
+            //       SizedBox(
+            //         width: 25,
+            //       ),
+            //       Icon(Icons.share_outlined, color: Colors.white, size: 25),
+            //       SizedBox(
+            //         width: 9,
+            //       ),
+            //       Text(
+            //         'Share App',
+            //         style: TextStyle(
+            //           color: Colors.white,
+            //           fontSize: 18,
+            //         ),
+            //       ),
+            //     ],
+            //   ),
+            // ),
             const SizedBox(
               height: 18,
             ),
             Container(
               width: MediaQuery.sizeOf(context).width,
-              height: 180,
+              height: 144,
               decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 78, 78, 78),
+                color: const Color.fromARGB(255, 109, 104, 104),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: const Column(
@@ -106,21 +109,6 @@ class Settings extends StatelessWidget {
                   SizedBox(
                     height: 15,
                   ),
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: 25,
-                      ),
-                      Icon(Icons.error_outline, color: Colors.white, size: 25),
-                      SizedBox(
-                        width: 9,
-                      ),
-                      Text(
-                        'Version 1.11',
-                        style: TextStyle(color: Colors.white, fontSize: 18),
-                      ),
-                    ],
-                  ),
                 ],
               ),
             ),
@@ -131,7 +119,7 @@ class Settings extends StatelessWidget {
               width: MediaQuery.sizeOf(context).width,
               height: 65,
               decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 78, 78, 78),
+                color: const Color.fromARGB(255, 109, 104, 104),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: const Row(
@@ -159,7 +147,7 @@ class Settings extends StatelessWidget {
               width: MediaQuery.sizeOf(context).width,
               height: 180,
               decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 78, 78, 78),
+                color: const Color.fromARGB(255, 109, 104, 104),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Column(

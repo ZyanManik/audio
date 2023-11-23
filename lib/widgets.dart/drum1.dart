@@ -55,7 +55,7 @@ class _Drum1State extends State<Drum1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 103, 102, 102),
+      backgroundColor: const Color.fromARGB(255, 126, 121, 121),
       appBar: AppBar(
         centerTitle: true,
         title: const Row(
@@ -74,7 +74,7 @@ class _Drum1State extends State<Drum1> {
             ),
           ],
         ),
-        backgroundColor: const Color.fromARGB(255, 74, 73, 73),
+        backgroundColor: const Color.fromARGB(255, 182, 181, 181),
         leading: InkWell(
           child: const Icon(Icons.arrow_back_ios_new),
           onTap: () {

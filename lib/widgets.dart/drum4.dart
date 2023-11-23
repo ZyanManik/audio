@@ -57,7 +57,7 @@ class Drum4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color.fromARGB(255, 126, 121, 121),
       appBar: AppBar(
         centerTitle: true,
         title: const Row(
@@ -76,7 +76,7 @@ class Drum4 extends StatelessWidget {
             ),
           ],
         ),
-        backgroundColor: const Color.fromARGB(255, 21, 21, 21),
+        backgroundColor: const Color.fromARGB(255, 182, 181, 181),
         leading: InkWell(
           child: const Icon(Icons.arrow_back_ios),
           onTap: () {
