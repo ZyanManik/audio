@@ -60,18 +60,7 @@ class _Drum1State extends State<Drum1> {
     {
       "color": const Color.fromARGB(255, 201, 47, 0),
     },
-    {
-      "color": const Color.fromARGB(255, 200, 0, 236),
-    },
-    {
-      "color": const Color.fromARGB(255, 116, 200, 21),
-    },
-    {
-      "color": const Color.fromARGB(255, 12, 141, 141),
-    },
-    {
-      "color": const Color.fromARGB(255, 226, 219, 219),
-    },
+    
   ];
 
   @override
@@ -108,7 +97,7 @@ class _Drum1State extends State<Drum1> {
         itemCount: clrlist.length,
         padding: const EdgeInsets.only(top: 50, left: 10, right: 10, bottom: 0),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4,
+            crossAxisCount: 3,
             crossAxisSpacing: 10.0,
             mainAxisSpacing: 15.0,
             childAspectRatio: 1.0),
@@ -127,7 +116,7 @@ class _Drum1State extends State<Drum1> {
               child: InkWell(
                 onTap: () async {
                   final player = AudioPlayer();
-                  await player.play(AssetSource("PartyDrums${index+1}.wav"));
+                  await player.play(AssetSource("drum${index+1}.wav"));
                 },
                 child: Container(
                   constraints: const BoxConstraints(
