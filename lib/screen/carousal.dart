@@ -52,7 +52,8 @@ class _CarousalState extends State<Carousal> {
               style: TextStyle(
                   color: Colors.blue,
                   fontSize: 30,
-                  fontWeight: FontWeight.bold),
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'greatvibes'),
             ),
           ],
         ),
@@ -64,7 +65,7 @@ class _CarousalState extends State<Carousal> {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                  image: const AssetImage('images/back.jpg'),
+                  image: const AssetImage('assets/back.jpg'),
                   fit: BoxFit.cover,
                   colorFilter: ColorFilter.mode(
                       Colors.black38.withOpacity(0.8), BlendMode.darken)),
@@ -91,7 +92,7 @@ class _CarousalState extends State<Carousal> {
                       decoration: BoxDecoration(
                         color: Colors.white10,
                         image: const DecorationImage(
-                            image: AssetImage("images/1.png"),
+                            image: AssetImage("assets/1.png"),
                             fit: BoxFit.fill),
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -110,7 +111,7 @@ class _CarousalState extends State<Carousal> {
                       decoration: BoxDecoration(
                         color: Colors.white10,
                         image: const DecorationImage(
-                            image: AssetImage("images/tabla.png"),
+                            image: AssetImage("assets/tabla.png"),
                             fit: BoxFit.fill),
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -128,7 +129,7 @@ class _CarousalState extends State<Carousal> {
                       decoration: BoxDecoration(
                         color: Colors.white10,
                         image: const DecorationImage(
-                            image: AssetImage("images/2.png"),
+                            image: AssetImage("assets/2.png"),
                             fit: BoxFit.fill),
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -146,7 +147,7 @@ class _CarousalState extends State<Carousal> {
                       decoration: BoxDecoration(
                         color: Colors.white10,
                         image: const DecorationImage(
-                            image: AssetImage("images/4.png"),
+                            image: AssetImage("assets/4.png"),
                             fit: BoxFit.fill),
                         borderRadius: BorderRadius.circular(20),
                       ),
