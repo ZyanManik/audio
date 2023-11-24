@@ -55,7 +55,7 @@ class _Drum1State extends State<Drum1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 126, 121, 121),
+      // backgroundColor: const Color.fromARGB(255, 126, 121, 121),
       appBar: AppBar(
         centerTitle: true,
         title: const Row(
@@ -82,37 +82,46 @@ class _Drum1State extends State<Drum1> {
           },
         ),
       ),
-      body: GridView.builder(
-        itemCount: clrlist.length,
-        padding: const EdgeInsets.only(top: 50, left: 10, right: 10, bottom: 0),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            crossAxisSpacing: 10.0,
-            mainAxisSpacing: 15.0,
-            childAspectRatio: 1.0),
-        itemBuilder: (context, index) => SizedBox(
-          child: MaterialButton(
-            onPressed: () {},
-            splashColor: Colors.red,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            padding: const EdgeInsets.all(0.0),
-            child: Ink(
-              decoration: BoxDecoration(
-                  color: clrlist[index]["color"],
-                  //gradient: clrlist[index]['color'],
-                  borderRadius: BorderRadius.circular(20)),
-              child: Container(
-                constraints: const BoxConstraints(
-                    minWidth: 88.0,
-                    minHeight: 36.0), // min sizes for Material buttons
-                alignment: Alignment.center,
-                child: null,
+      body: Stack(
+        children: [
+          
+          Column(
+            children: [
+             
+              GridView.builder(
+              itemCount: clrlist.length,
+              padding: const EdgeInsets.only(top: 50, left: 10, right: 10, bottom: 0),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 10.0,
+                  mainAxisSpacing: 15.0,
+                  childAspectRatio: 1.0),
+              itemBuilder: (context, index) => SizedBox(
+                child: MaterialButton(
+                  onPressed: () {},
+                  splashColor: Colors.red,
+                  shape:
+                      RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                  padding: const EdgeInsets.all(0.0),
+                  child: Ink(
+                    decoration: BoxDecoration(
+                        color: clrlist[index]["color"],
+                        //gradient: clrlist[index]['color'],
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Container(
+                      constraints: const BoxConstraints(
+                          minWidth: 88.0,
+                          minHeight: 36.0), // min sizes for Material buttons
+                      alignment: Alignment.center,
+                      child: null,
+                    ),
+                  ),
+                ),
               ),
-            ),
-          ),
         ),
-      ),
+            ],
+          ),
+     ] ),
     );
   }
 }

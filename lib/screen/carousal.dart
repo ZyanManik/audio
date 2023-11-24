@@ -5,6 +5,7 @@ import 'package:audio/widgets.dart/drum4.dart';
 import 'package:audio/widgets.dart/drum5.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:readmore/readmore.dart';
 //import 'package:flutter/services.dart';
 //import 'package:flutter/services.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -34,7 +35,7 @@ class _CarousalState extends State<Carousal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: const Color.fromARGB(255, 202, 215, 221),
+      backgroundColor: const Color.fromARGB(255, 236, 206, 195),
       appBar: AppBar(
         // systemOverlayStyle: const SystemUiOverlayStyle(
         //   statusBarColor: Color.fromARGB(255, 12, 21, 28),
@@ -45,38 +46,38 @@ class _CarousalState extends State<Carousal> {
           children: [
             Text(
               'Musical',
-              style: TextStyle(color: Colors.white, fontSize: 40),
+              style: TextStyle(color: Colors.white, fontSize: 25),
             ),
             Text(
-              '__Pad',
+              '_Pad',
               style: TextStyle(
-                  color: Colors.blue,
-                  fontSize: 30,
+                  color: Color.fromARGB(255, 180, 114, 90),
+                  fontSize: 25,
                   fontWeight: FontWeight.bold),
             ),
           ],
         ),
         elevation: 0,
-        backgroundColor: const Color.fromARGB(255, 35, 60, 80),
+        backgroundColor: const Color.fromARGB(255, 225, 150, 122),
+        //  Color.fromARGB(255, 204, 166, 152),
       ),
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: const AssetImage('images/back.jpg'),
-                  fit: BoxFit.cover,
-                  colorFilter: ColorFilter.mode(
-                      Colors.black38.withOpacity(0.8), BlendMode.darken)),
+                image: AssetImage('images/back2.jpg'),
+                fit: BoxFit.cover,
+              ),
             ),
-            child: ListView(
-              children: [
-                Container(
-                  height: 70,
-                  width: 70,
-                ),
-              ],
-            ),
+            // child: ListView(
+            //   children: [
+            //     Container(
+            //       height: 70,
+            //       width: 70,
+            //     ),
+            //   ],
+            // ),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -91,7 +92,7 @@ class _CarousalState extends State<Carousal> {
                       decoration: BoxDecoration(
                         color: Colors.white10,
                         image: const DecorationImage(
-                            image: AssetImage("images/1.png"),
+                            image: AssetImage("images/alternate2.png"),
                             fit: BoxFit.fill),
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -213,9 +214,9 @@ class _CarousalState extends State<Carousal> {
               Padding(
                 padding: const EdgeInsets.only(left: 40, right: 40),
                 child: SingleChildScrollView(
-                  child: Text(
+                  child: ReadMoreText(
                     cont[currentindex]["txt"],
-                    style: const TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                     textAlign: TextAlign.justify,
                   ),
                 ),
