@@ -51,6 +51,7 @@ class _SplashState extends State<Splash> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+
               Center(
                 child: Container(
                   height: 150,

@@ -32,7 +32,7 @@ class _BottomNavigationBarExampleState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 225, 150, 122) ,
+      backgroundColor: const Color.fromARGB(255, 186, 137, 141),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
@@ -40,17 +40,17 @@ class _BottomNavigationBarExampleState
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(30), topRight: Radius.circular(30)),
-          color:  const Color.fromARGB(255, 225, 150, 122),
+          color: Color.fromARGB(255, 186, 137, 141),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 12),
           child: Container(
-            color: const Color.fromARGB(255, 225, 150, 122),
+            color: const Color.fromARGB(255, 186, 137, 141),
             child: GNav(
-              backgroundColor:   const Color.fromARGB(255, 225, 150, 122),
+              backgroundColor:   const Color.fromARGB(255, 186, 137, 141),
               color: Colors.white,
               activeColor: Colors.white,
-              tabBackgroundColor:  Color.fromARGB(255, 180, 114, 90),
+              tabBackgroundColor: const Color.fromARGB(255, 225, 180, 183),
               padding: const EdgeInsets.all(10),
               onTabChange: (value) {
                 setState(() {

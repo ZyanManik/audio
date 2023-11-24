@@ -41,24 +41,20 @@ class _CarousalState extends State<Carousal> {
         //   statusBarColor: Color.fromARGB(255, 12, 21, 28),
         //   systemNavigationBarColor: Colors.amber,
         // ),
-        toolbarHeight: 65.0,
-        title: const Row(
+        // toolbarHeight: 65.0,
+        title: const Column(
           children: [
-            Text(
-              'Musical',
-              style: TextStyle(color: Colors.white, fontSize: 25),
-            ),
-            Text(
-              '_Pad',
-              style: TextStyle(
-                  color: Color.fromARGB(255, 180, 114, 90),
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold),
+            SizedBox(height: 10,),
+            Center(
+              child: Text("Simply Drums",style: TextStyle(
+                fontFamily: 'Beach',
+                fontSize: 50
+              ),),
             ),
           ],
         ),
         elevation: 0,
-        backgroundColor: const Color.fromARGB(255, 225, 150, 122),
+        backgroundColor: const Color.fromARGB(255, 186, 137, 141),
         //  Color.fromARGB(255, 204, 166, 152),
       ),
       body: Stack(
@@ -80,6 +76,7 @@ class _CarousalState extends State<Carousal> {
             // ),
           ),
           Column(
+            
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const SizedBox(
@@ -92,7 +89,7 @@ class _CarousalState extends State<Carousal> {
                       decoration: BoxDecoration(
                         color: Colors.white10,
                         image: const DecorationImage(
-                            image: AssetImage("images/alternate2.png"),
+                            image: AssetImage("images/simpledrum.png"),
                             fit: BoxFit.fill),
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -111,7 +108,7 @@ class _CarousalState extends State<Carousal> {
                       decoration: BoxDecoration(
                         color: Colors.white10,
                         image: const DecorationImage(
-                            image: AssetImage("images/tabla.png"),
+                            image: AssetImage("images/alternate2.png"),
                             fit: BoxFit.fill),
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -129,7 +126,7 @@ class _CarousalState extends State<Carousal> {
                       decoration: BoxDecoration(
                         color: Colors.white10,
                         image: const DecorationImage(
-                            image: AssetImage("images/2.png"),
+                            image: AssetImage("images/tabla.png"),
                             fit: BoxFit.fill),
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -204,7 +201,7 @@ class _CarousalState extends State<Carousal> {
                 curve: Curves.easeInOut,
                 effect: const WormEffect(
                   dotColor: Colors.white,
-                  activeDotColor: Colors.blue,
+                  activeDotColor: Color.fromARGB(255, 246, 166, 166),
                   radius: 10,
                 ),
               ),
