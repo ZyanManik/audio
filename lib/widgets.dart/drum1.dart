@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -195,6 +196,46 @@ class _Drum1State extends State<Drum1> {
     // {
     //   "color": const Color.fromARGB(255, 12, 141, 141),
     // },
+<<<<<<< HEAD
+=======
+    {
+      "color": const Color.fromARGB(255, 226, 219, 219),
+    },
+    {
+      "color": const Color.fromARGB(255, 0, 105, 190),
+    },
+    {
+      "color": const Color.fromARGB(255, 228, 0, 76),
+    },
+    {
+      "color": const Color.fromARGB(255, 35, 148, 39),
+    },
+    {
+      "color": const Color.fromARGB(255, 36, 64, 78),
+    },
+    {
+      "color": const Color.fromARGB(255, 201, 47, 0),
+    },
+    {
+      "color": const Color.fromARGB(255, 200, 0, 236),
+    },
+    {
+      "color": const Color.fromARGB(255, 116, 200, 21),
+    },
+    {
+      "color": const Color.fromARGB(255, 12, 141, 141),
+    },
+    {
+      "color": const Color.fromARGB(255, 35, 148, 39),
+    },
+    {
+      "color": const Color.fromARGB(255, 36, 64, 78),
+    },
+    {
+      "color": const Color.fromARGB(255, 201, 47, 0),
+    },
+    
+>>>>>>> f21e1385b5ea0fe332a46d0244710de609752bd8
   ];
 
   @override
@@ -247,12 +288,18 @@ class _Drum1State extends State<Drum1> {
                   //color: clrlist[index]["color"],
                   gradient: clrlist[index]['color'],
                   borderRadius: BorderRadius.circular(20)),
-              child: Container(
-                constraints: const BoxConstraints(
-                    minWidth: 88.0,
-                    minHeight: 36.0), // min sizes for Material buttons
-                alignment: Alignment.center,
-                child: null,
+              child: InkWell(
+                onTap: () async {
+                  final player = AudioPlayer();
+                  await player.play(AssetSource("drum${index+1}.wav"));
+                },
+                child: Container(
+                  constraints: const BoxConstraints(
+                      minWidth: 88.0,
+                      minHeight: 36.0), // min sizes for Material buttons
+                  alignment: Alignment.center,
+                  child: null,
+                ),
               ),
             ),
           ),

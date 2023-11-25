@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -91,12 +92,18 @@ class Drum2 extends StatelessWidget {
               decoration: BoxDecoration(
                   color: clrlist[index]["color"],
                   borderRadius: BorderRadius.circular(10)),
-              child: Container(
-                constraints: const BoxConstraints(
-                    minWidth: 88.0,
-                    minHeight: 36.0), // min sizes for Material buttons
-                alignment: Alignment.center,
-                child: null,
+              child: InkWell(
+                onTap: () async {
+                  final player = AudioPlayer();
+                  await player.play(AssetSource("tabla${index + 1}.wav"));
+                },
+                child: Container(
+                  constraints: const BoxConstraints(
+                      minWidth: 88.0,
+                      minHeight: 36.0), // min sizes for Material buttons
+                  alignment: Alignment.center,
+                  child: null,
+                ),
               ),
             ),
           ),
