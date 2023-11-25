@@ -1,6 +1,5 @@
-//import 'package:audio/screen/bottomnav.dart';
-//import 'package:audio/screen/bottomnav.dart';
-import 'package:audio/screen/splash.dart';
+import 'package:audio/screen/bottomnav.dart';
+//import 'package:audio/screen/splash1.dart';
 //import 'package:audio/screen/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -30,7 +29,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Splash(),
+      home: BottomNavigationBarExample(),
     );
   }
 }

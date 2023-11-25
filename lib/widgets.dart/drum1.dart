@@ -10,46 +10,191 @@ class Drum1 extends StatefulWidget {
 
 class _Drum1State extends State<Drum1> {
   List clrlist = [
+    {
+      "color": const RadialGradient(
+        radius: 3.0,
+        center: Alignment.center,
+        colors: [
+          Color.fromARGB(255, 255, 65, 2),
+          Color.fromARGB(255, 89, 7, 7),
+          Colors.black,
+          Colors.orange,
+          Colors.deepOrangeAccent
+        ],
+      ),
+    },
+    {
+      "color": const RadialGradient(
+        radius: 3.0,
+        center: Alignment.center,
+        colors: [
+          Color.fromARGB(255, 2, 133, 255),
+          Color.fromARGB(255, 7, 33, 89),
+          Colors.black,
+          Colors.blue,
+          Colors.blueAccent
+        ],
+      ),
+    },
+    {
+      "color": const RadialGradient(
+        radius: 3.0,
+        center: Alignment.center,
+        colors: [
+          Color.fromARGB(255, 2, 255, 36),
+          Color.fromARGB(255, 7, 89, 63),
+          Colors.black,
+          Colors.green,
+          Colors.greenAccent
+        ],
+      ),
+    },
+    {
+      "color": const RadialGradient(
+        radius: 3.0,
+        center: Alignment.center,
+        colors: [
+          Color.fromARGB(255, 133, 2, 255),
+          Color.fromARGB(255, 53, 2, 63),
+          Colors.black,
+          Colors.purple,
+          Colors.deepPurple
+        ],
+      ),
+    },
+    {
+      "color": const RadialGradient(
+        radius: 3.0,
+        center: Alignment.center,
+        colors: [
+          Color.fromARGB(255, 60, 58, 203),
+          Color.fromARGB(255, 27, 38, 83),
+          Colors.black,
+          Colors.indigo,
+          Colors.indigoAccent
+        ],
+      ),
+    },
+    {
+      "color": const RadialGradient(
+        radius: 3.0,
+        center: Alignment.center,
+        colors: [
+          Color.fromARGB(255, 176, 154, 146),
+          Color.fromARGB(255, 78, 68, 68),
+          Colors.black,
+          Colors.grey,
+          Colors.blueGrey
+        ],
+      ),
+    },
+    {
+      "color": const RadialGradient(
+        radius: 3.0,
+        center: Alignment.center,
+        colors: [
+          Color.fromARGB(255, 2, 15, 255),
+          Color.fromARGB(255, 15, 4, 86),
+          Colors.black,
+          Colors.lightBlueAccent,
+          Colors.lightBlue
+        ],
+      ),
+    },
+    {
+      "color": const RadialGradient(
+        radius: 3.0,
+        center: Alignment.center,
+        colors: [
+          Color.fromARGB(255, 62, 186, 220),
+          Color.fromARGB(255, 11, 116, 126),
+          Colors.black,
+          Colors.cyan,
+          Colors.cyanAccent
+        ],
+      ),
+    },
+    {
+      "color": const RadialGradient(
+        radius: 3.0,
+        center: Alignment.center,
+        colors: [
+          Color.fromARGB(255, 255, 138, 4),
+          Color.fromARGB(255, 134, 65, 4),
+          Colors.black,
+          Color.fromARGB(255, 129, 59, 5),
+          Color.fromARGB(255, 135, 94, 5)
+        ],
+      ),
+    },
+
+    {
+      "color": const RadialGradient(
+        radius: 3.0,
+        center: Alignment.center,
+        colors: [
+          Color.fromARGB(255, 255, 234, 0),
+          Color.fromARGB(255, 121, 129, 12),
+          Colors.black,
+          Color.fromARGB(255, 129, 139, 41),
+          Color.fromARGB(255, 116, 122, 51)
+        ],
+      ),
+    },
+    {
+      "color": const RadialGradient(
+        radius: 3.0,
+        center: Alignment.center,
+        colors: [
+          Color.fromARGB(255, 244, 12, 144),
+          Color.fromARGB(255, 150, 15, 111),
+          Colors.black,
+          Color.fromARGB(255, 113, 9, 79),
+          Color.fromARGB(255, 45, 4, 37)
+        ],
+      ),
+    },
+    {
+      "color": const RadialGradient(
+        radius: 3.0,
+        center: Alignment.center,
+        colors: [
+          Color.fromARGB(255, 182, 6, 236),
+          Color.fromARGB(255, 118, 41, 138),
+          Colors.black,
+          Color.fromARGB(255, 64, 8, 75),
+          Color.fromARGB(255, 119, 5, 123)
+        ],
+      ),
+    },
+
     // {
-    //   "color": const RadialGradient(
-    //     radius: 3.0,
-    //     center: Alignment.center,
-    //     colors: [
-    //       Color.fromARGB(255, 255, 65, 2),
-    //       Color.fromARGB(255, 89, 7, 7),
-    //       Colors.black,
-    //       Colors.orange,
-    //       Colors.deepOrangeAccent
-    //     ],
-    //   ),
+    //   "color": const Color.fromARGB(255, 226, 219, 219),
     // },
-    {
-      "color": Color.fromARGB(255, 226, 219, 219),
-    },
-    {
-      "color": const Color.fromARGB(255, 0, 105, 190),
-    },
-    {
-      "color": const Color.fromARGB(255, 228, 0, 76),
-    },
-    {
-      "color": const Color.fromARGB(255, 35, 148, 39),
-    },
-    {
-      "color": const Color.fromARGB(255, 36, 64, 78),
-    },
-    {
-      "color": const Color.fromARGB(255, 201, 47, 0),
-    },
-    {
-      "color": const Color.fromARGB(255, 200, 0, 236),
-    },
-    {
-      "color": const Color.fromARGB(255, 116, 200, 21),
-    },
-    {
-      "color": const Color.fromARGB(255, 12, 141, 141),
-    },
+    // {
+    //   "color": const Color.fromARGB(255, 0, 105, 190),
+    // },
+    // {
+    //   "color": const Color.fromARGB(255, 228, 0, 76),
+    // },
+    // {
+    //   "color": const Color.fromARGB(255, 35, 148, 39),
+    // },
+    // {
+    //   "color": const Color.fromARGB(255, 36, 64, 78),
+    // },
+    // {
+    //   "color": const Color.fromARGB(255, 201, 47, 0),
+    // },
+    // {
+    //   "color": const Color.fromARGB(255, 200, 0, 236),
+    // },
+    // {
+    //   "color": const Color.fromARGB(255, 116, 200, 21),
+    // },
+    // {
+    //   "color": const Color.fromARGB(255, 12, 141, 141),
+    // },
   ];
 
   @override
@@ -99,8 +244,8 @@ class _Drum1State extends State<Drum1> {
             padding: const EdgeInsets.all(0.0),
             child: Ink(
               decoration: BoxDecoration(
-                  color: clrlist[index]["color"],
-                  //gradient: clrlist[index]['color'],
+                  //color: clrlist[index]["color"],
+                  gradient: clrlist[index]['color'],
                   borderRadius: BorderRadius.circular(20)),
               child: Container(
                 constraints: const BoxConstraints(
