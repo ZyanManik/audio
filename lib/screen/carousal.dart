@@ -68,11 +68,30 @@ class _CarousalState extends State<Carousal> {
       ),
       body: Stack(
         children: [
+
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: const AssetImage('assets/back.jpg'),
+                  fit: BoxFit.cover,
+                  colorFilter: ColorFilter.mode(
+                      Colors.black38.withOpacity(0.8), BlendMode.darken)),
+            ),
+            child: ListView(
+              children: const [
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                ),
+              ],
+            ),
+          ),
+
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const SizedBox(
-                height: 70,
+                height: 40,
               ),
               CarouselSlider(
                 items: [
@@ -133,7 +152,7 @@ class _CarousalState extends State<Carousal> {
                 ],
                 options: CarouselOptions(
                   autoPlayCurve: Curves.fastOutSlowIn,
-                  height: 350.0,
+                  height: 300.0,
                   autoPlayAnimationDuration: const Duration(milliseconds: 800),
                   autoPlayInterval: const Duration(seconds: 2),
                   enlargeCenterPage: true,
@@ -148,7 +167,7 @@ class _CarousalState extends State<Carousal> {
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 14,
               ),
               AnimatedSmoothIndicator(
                 activeIndex: currentindex,
@@ -161,7 +180,7 @@ class _CarousalState extends State<Carousal> {
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 8,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 40, right: 40),

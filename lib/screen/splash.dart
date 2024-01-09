@@ -37,12 +37,9 @@ class _SplashState extends State<Splash> {
             width: MediaQuery.sizeOf(context).width,
             height: MediaQuery.sizeOf(context).height,
             decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 7, 67, 102).withOpacity(0.5),
+                color: const Color.fromARGB(255, 17, 17, 17).withOpacity(0.5),
                 image: const DecorationImage(
-                    image: NetworkImage(
-                      "https://e0.pxfuel.com/wallpapers/545/178/desktop-wallpaper-music-pearl-drums-background-for-drummer.jpg",
-                    ),
-                    fit: BoxFit.cover),
+                    image: AssetImage("images/back.jpg"), fit: BoxFit.cover),
                 borderRadius: const BorderRadius.only(
                   topRight: Radius.circular(200),
                   bottomLeft: Radius.circular(200),
@@ -60,9 +57,7 @@ class _SplashState extends State<Splash> {
                   width: 150,
                   decoration: BoxDecoration(
                     image: const DecorationImage(
-                        image: NetworkImage(
-                            "https://images.vexels.com/media/users/3/191299/isolated/preview/92eb00a2a8197fad37ef00b395cc87ee-music-drum.png"),
-                        fit: BoxFit.cover),
+                        image: AssetImage("images/4.jpg"), fit: BoxFit.cover),
                     color: Colors.amber,
                     borderRadius: BorderRadius.circular(40),
                     boxShadow: const [
