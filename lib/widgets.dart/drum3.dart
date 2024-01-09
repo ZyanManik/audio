@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -40,36 +41,25 @@ class Drum3 extends StatelessWidget {
     {
       "color": const Color.fromARGB(255, 8, 127, 143),
     },
-    {
-      "color": const Color.fromARGB(255, 112, 181, 34),
-    },
-    {
-      "color": const Color.fromARGB(255, 28, 78, 78),
-    },
-    {
-      "color": const Color.fromARGB(255, 49, 9, 117),
-    },
-    {
-      "color": const Color.fromARGB(255, 71, 33, 20),
-    }
+    
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 126, 121, 121),
+      
       appBar: AppBar(
         centerTitle: true,
         title: const Row(
           children: [
             Text(
-              'Drum',
+              'Electronic',
               style: TextStyle(
                 color: Colors.white,
               ),
             ),
             Text(
-              '_3',
+              '_Drum',
               style: TextStyle(
                 color: Color.fromARGB(255, 255, 17, 1),
               ),
@@ -84,25 +74,29 @@ class Drum3 extends StatelessWidget {
           },
         ),
       ),
-      body: GridView.builder(
+      body:  GridView.builder(
         itemCount: clrlist.length,
-        padding: const EdgeInsets.only(top: 40, left: 10, right: 10, bottom: 0),
+        padding: const EdgeInsets.only(top: 50, left: 10, right: 10, bottom: 0),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4,
+            crossAxisCount: 3,
             crossAxisSpacing: 10.0,
-            mainAxisSpacing: 30.0,
-            childAspectRatio: 0.6),
+            mainAxisSpacing: 15.0,
+            childAspectRatio: 1.0),
         itemBuilder: (context, index) => SizedBox(
           child: MaterialButton(
-            onPressed: () {},
-            splashColor: Colors.grey,
+            onPressed: () async {
+                  final player = AudioPlayer();
+                  await player.play(AssetSource("DubstepClub${index + 1}.wav"));
+                },
+            splashColor: Colors.red,
             shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             padding: const EdgeInsets.all(0.0),
             child: Ink(
               decoration: BoxDecoration(
-                  color: clrlist[index]["color"],
-                  borderRadius: BorderRadius.circular(10)),
+                 color: clrlist[index]["color"],
+                //  gradient: clrlist[index]['color'],
+                  borderRadius: BorderRadius.circular(30)),
               child: Container(
                 constraints: const BoxConstraints(
                     minWidth: 88.0,

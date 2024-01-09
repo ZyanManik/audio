@@ -1,13 +1,11 @@
-import 'package:audio/widgets.dart/drum1.dart';
-import 'package:audio/widgets.dart/drum2.dart';
-import 'package:audio/widgets.dart/drum3.dart';
-import 'package:audio/widgets.dart/drum4.dart';
-import 'package:audio/widgets.dart/drum5.dart';
+import 'package:adaptive_theme/adaptive_theme.dart';
+import 'package:audio/widgets.dart/drumkit.dart';
+import 'package:audio/widgets.dart/tabla.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-//import 'package:flutter/services.dart';
-//import 'package:flutter/services.dart';
+import 'package:readmore/readmore.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import '../widgets.dart/drum3.dart';
 
 class Carousal extends StatefulWidget {
   const Carousal({super.key});
@@ -18,6 +16,7 @@ class Carousal extends StatefulWidget {
 
 class _CarousalState extends State<Carousal> {
   int currentindex = 0;
+
   List cont = [
     {
       "txt":
@@ -34,12 +33,7 @@ class _CarousalState extends State<Carousal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: const Color.fromARGB(255, 202, 215, 221),
       appBar: AppBar(
-        // systemOverlayStyle: const SystemUiOverlayStyle(
-        //   statusBarColor: Color.fromARGB(255, 12, 21, 28),
-        //   systemNavigationBarColor: Colors.amber,
-        // ),
         toolbarHeight: 65.0,
         title: const Row(
           children: [
@@ -48,7 +42,7 @@ class _CarousalState extends State<Carousal> {
               style: TextStyle(color: Colors.white, fontSize: 40),
             ),
             Text(
-              '__Pad',
+              '_Pad',
               style: TextStyle(
                   color: Colors.blue,
                   fontSize: 30,
@@ -59,26 +53,21 @@ class _CarousalState extends State<Carousal> {
         ),
         elevation: 0,
         backgroundColor: const Color.fromARGB(255, 35, 60, 80),
+        actions: [
+          Switch(
+            value: AdaptiveTheme.of(context).mode.isDark,
+            onChanged: (value) {
+              if (value) {
+                AdaptiveTheme.of(context).setDark();
+              } else {
+                AdaptiveTheme.of(context).setLight();
+              }
+            },
+          ),
+        ],
       ),
       body: Stack(
         children: [
-          Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: const AssetImage('assets/back.jpg'),
-                  fit: BoxFit.cover,
-                  colorFilter: ColorFilter.mode(
-                      Colors.black38.withOpacity(0.8), BlendMode.darken)),
-            ),
-            child: ListView(
-              children: [
-                Container(
-                  height: 70,
-                  width: 70,
-                ),
-              ],
-            ),
-          ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -92,7 +81,7 @@ class _CarousalState extends State<Carousal> {
                       decoration: BoxDecoration(
                         color: Colors.white10,
                         image: const DecorationImage(
-                            image: AssetImage("assets/1.png"),
+                            image: AssetImage("assets/den.jpg"),
                             fit: BoxFit.fill),
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -111,7 +100,7 @@ class _CarousalState extends State<Carousal> {
                       decoration: BoxDecoration(
                         color: Colors.white10,
                         image: const DecorationImage(
-                            image: AssetImage("assets/tabla.png"),
+                            image: AssetImage("assets/jon.jpg"),
                             fit: BoxFit.fill),
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -129,8 +118,7 @@ class _CarousalState extends State<Carousal> {
                       decoration: BoxDecoration(
                         color: Colors.white10,
                         image: const DecorationImage(
-                            image: AssetImage("assets/2.png"),
-                            fit: BoxFit.fill),
+                            image: AssetImage("3.png"), fit: BoxFit.fill),
                         borderRadius: BorderRadius.circular(20),
                       ),
                     ),
@@ -139,42 +127,6 @@ class _CarousalState extends State<Carousal> {
                           context,
                           MaterialPageRoute(
                             builder: (context) => Drum3(),
-                          ));
-                    },
-                  ),
-                  GestureDetector(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white10,
-                        image: const DecorationImage(
-                            image: AssetImage("assets/4.png"),
-                            fit: BoxFit.fill),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                    ),
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => Drum4(),
-                          ));
-                    },
-                  ),
-                  GestureDetector(
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        color: Colors.white10,
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(20),
-                        ),
-                      ),
-                    ),
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => Drum5(),
                           ));
                     },
                   ),
@@ -200,7 +152,7 @@ class _CarousalState extends State<Carousal> {
               ),
               AnimatedSmoothIndicator(
                 activeIndex: currentindex,
-                count: 5,
+                count: 3,
                 curve: Curves.easeInOut,
                 effect: const WormEffect(
                   dotColor: Colors.white,
@@ -214,9 +166,8 @@ class _CarousalState extends State<Carousal> {
               Padding(
                 padding: const EdgeInsets.only(left: 40, right: 40),
                 child: SingleChildScrollView(
-                  child: Text(
+                  child: ReadMoreText(
                     cont[currentindex]["txt"],
-                    style: const TextStyle(color: Colors.white),
                     textAlign: TextAlign.justify,
                   ),
                 ),
