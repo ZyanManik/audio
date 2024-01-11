@@ -320,7 +320,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.0"
-<<<<<<< HEAD
   shared_preferences:
     dependency: "direct main"
     description:
@@ -377,7 +376,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.2"
-=======
   simple_animations:
     dependency: "direct main"
     description:
@@ -386,7 +384,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.0.2"
->>>>>>> 74dfd000993aa536cdf35f5106e38cb918d49233
   sky_engine:
     dependency: transitive
     description: flutter

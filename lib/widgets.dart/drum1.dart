@@ -1,7 +1,7 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
+
 class Drum1 extends StatefulWidget {
   const Drum1({super.key});
 
@@ -196,8 +196,7 @@ class _Drum1State extends State<Drum1> {
     // {
     //   "color": const Color.fromARGB(255, 12, 141, 141),
     // },
-<<<<<<< HEAD
-=======
+
     {
       "color": const Color.fromARGB(255, 226, 219, 219),
     },
@@ -235,7 +234,6 @@ class _Drum1State extends State<Drum1> {
       "color": const Color.fromARGB(255, 201, 47, 0),
     },
     
->>>>>>> f21e1385b5ea0fe332a46d0244710de609752bd8
   ];
 
   @override

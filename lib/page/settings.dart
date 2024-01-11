@@ -1,9 +1,7 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
 
-// import '../theme/theme_manager.dart';
 
-// ThemeManager _themeManager = ThemeManager();
 
 
 class Settings extends StatefulWidget {
@@ -14,23 +12,7 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
-  // @override
-  // void dispose() {
-  //   _themeManager.removeListener(themelistener);
-  //   super.dispose();
-  // }
 
-  // @override
-  // void initState() {
-  //   _themeManager.addListener(themelistener);
-  //   super.initState();
-  // }
-
-  // themelistener() {
-  //   if (mounted) {
-  //     setState(() {});
-  //   }
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -63,33 +45,7 @@ class _SettingsState extends State<Settings> {
               const EdgeInsets.only(top: 20, bottom: 20, left: 18, right: 18),
           child: Column(
             children: [
-              // Container(
-              //   width: MediaQuery.sizeOf(context).width,
-              //   height: 65,
-              //   decoration: BoxDecoration(
-              //     color: const Color.fromARGB(255, 109, 104, 104),
-              //     borderRadius: BorderRadius.circular(0),
-              //   ),
-              //   child: const Row(
-              //     mainAxisAlignment: MainAxisAlignment.start,
-              //     children: [
-              //       SizedBox(
-              //         width: 25,
-              //       ),
-              //       Icon(Icons.share_outlined, color: Colors.white, size: 25),
-              //       SizedBox(
-              //         width: 9,
-              //       ),
-              //       Text(
-              //         'Share App',
-              //         style: TextStyle(
-              //           color: Colors.white,
-              //           fontSize: 18,
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
+              
               const SizedBox(
                 height: 18,
               ),
@@ -100,12 +56,12 @@ class _SettingsState extends State<Settings> {
                   color: const Color.fromARGB(255, 109, 104, 104),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child:  Column(
+                child:  const Column(
                   children: [
-                    const SizedBox(
+                    SizedBox(
                       height: 35,
                     ),
-                    const Row(
+                    Row(
                       children: [
                         SizedBox(
                           width: 25,
@@ -121,29 +77,19 @@ class _SettingsState extends State<Settings> {
                         ),
                       ],
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 20,
                     ),
                     Row(
                       children: [
-                        const SizedBox(
+                        SizedBox(
                           width: 25,
                         ),
-                        const Icon(Icons.dark_mode_outlined,
-                            color: Colors.white, size: 25),
-                        const SizedBox(
-                          width: 9,
-                        ),
-                        const Text(
-                          'Dark Mode',
-                          style: TextStyle(color: Colors.white, fontSize: 18),
-                        ),
+                       
                  
                       ],
                     ),
-                    const SizedBox(
-                      height: 15,
-                    ),
+                   
                   ],
                 ),
               ),

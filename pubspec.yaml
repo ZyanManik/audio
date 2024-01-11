@@ -40,12 +40,9 @@ dependencies:
   google_nav_bar: ^5.0.6
   smooth_page_indicator: ^1.1.0
   readmore: ^2.2.0
-<<<<<<< HEAD
   adaptive_theme: ^3.5.0
   shared_preferences: ^2.2.2
-=======
   simple_animations: ^5.0.2
->>>>>>> 74dfd000993aa536cdf35f5106e38cb918d49233
 
 
 dev_dependencies:

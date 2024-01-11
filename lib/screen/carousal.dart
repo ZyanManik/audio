@@ -69,23 +69,7 @@ class _CarousalState extends State<Carousal> {
       body: Stack(
         children: [
 
-          Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: const AssetImage('assets/back.jpg'),
-                  fit: BoxFit.cover,
-                  colorFilter: ColorFilter.mode(
-                      Colors.black38.withOpacity(0.8), BlendMode.darken)),
-            ),
-            child: ListView(
-              children: const [
-                SizedBox(
-                  height: 70,
-                  width: 70,
-                ),
-              ],
-            ),
-          ),
+      
 
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
