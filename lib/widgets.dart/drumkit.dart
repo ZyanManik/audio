@@ -10,7 +10,7 @@ class DrumKit extends StatefulWidget {
 }
 
 class _DrumKitState extends State<DrumKit> {
- 
+  bool isclicked = false;
   List clrlist = [
     {
       "color": const RadialGradient(
@@ -169,7 +169,7 @@ class _DrumKitState extends State<DrumKit> {
       ),
     },
   ];
- 
+  List record = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -198,6 +198,19 @@ class _DrumKitState extends State<DrumKit> {
             Navigator.pop(context);
           },
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              setState(() {
+                record.add(3);
+                print(record);
+                isclicked = !isclicked;
+              });
+            },
+            icon: const Icon(Icons.circle),
+            color: isclicked ? Colors.red : Colors.white,
+          )
+        ],
       ),
       body: GridView.builder(
         itemCount: clrlist.length,

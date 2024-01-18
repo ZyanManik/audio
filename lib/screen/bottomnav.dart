@@ -1,5 +1,4 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
-import 'package:adaptive_theme/src/adaptive_theme_mode.dart';
 import 'package:audio/page/music.dart';
 
 import 'package:audio/page/settings.dart';

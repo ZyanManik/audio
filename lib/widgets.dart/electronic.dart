@@ -2,8 +2,15 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
-class Electronic extends StatelessWidget {
+class Electronic extends StatefulWidget {
   Electronic({super.key});
+
+  @override
+  State<Electronic> createState() => _ElectronicState();
+}
+
+class _ElectronicState extends State<Electronic> {
+  bool isclicked = false;
 
   List clrlist = [
     {
@@ -44,6 +51,8 @@ class Electronic extends StatelessWidget {
     },
   ];
 
+  List record = [];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,6 +81,19 @@ class Electronic extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              setState(() {
+                record.add(3);
+                print(record);
+                isclicked = !isclicked;
+              });
+            },
+            icon: const Icon(Icons.circle),
+            color: isclicked ? Colors.red : Colors.white,
+          )
+        ],
       ),
       body: GridView.builder(
         itemCount: clrlist.length,

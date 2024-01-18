@@ -2,8 +2,17 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
-class Tabla extends StatelessWidget {
+class Tabla extends StatefulWidget {
   Tabla({super.key});
+
+  @override
+  State<Tabla> createState() => _TablaState();
+}
+
+class _TablaState extends State<Tabla> {
+  bool isclicked = false;
+
+  List record = [];
 
   List clrlist = [
     {
@@ -198,6 +207,19 @@ class Tabla extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              setState(() {
+                record.add(3);
+                print(record);
+                isclicked = !isclicked;
+              });
+            },
+            icon: const Icon(Icons.circle),
+            color: isclicked ? Colors.red : Colors.white,
+          )
+        ],
       ),
       body: GridView.builder(
         itemCount: clrlist.length,
