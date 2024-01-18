@@ -2,15 +2,15 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
-class Drum1 extends StatefulWidget {
-  const Drum1({super.key});
+class DrumKit extends StatefulWidget {
+  const DrumKit({super.key});
 
   @override
-  State<Drum1> createState() => _Drum1State();
+  State<DrumKit> createState() => _DrumKitState();
 }
 
-class _Drum1State extends State<Drum1> {
-  bool isclicked = false;
+class _DrumKitState extends State<DrumKit> {
+ 
   List clrlist = [
     {
       "color": const RadialGradient(
@@ -169,11 +169,10 @@ class _Drum1State extends State<Drum1> {
       ),
     },
   ];
-  List record=[];
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
       appBar: AppBar(
         centerTitle: true,
         title: const Row(
@@ -199,18 +198,6 @@ class _Drum1State extends State<Drum1> {
             Navigator.pop(context);
           },
         ),
-        actions: [
-          IconButton(onPressed: (){
-            setState(() {
-            record.add(3);
-            print(record);
-              isclicked = !isclicked;
-            });
-          }, icon: const Icon(Icons.circle),
-          color:isclicked? Colors.red:Colors.white ,)
-        
-        ],
-        
       ),
       body: GridView.builder(
         itemCount: clrlist.length,
@@ -223,9 +210,9 @@ class _Drum1State extends State<Drum1> {
         itemBuilder: (context, index) => SizedBox(
           child: MaterialButton(
             onPressed: () async {
-                  final player = AudioPlayer();
-                  await player.play(AssetSource("drum${index + 1}.wav"));
-                },
+              final player = AudioPlayer();
+              await player.play(AssetSource("drum${index + 1}.wav"));
+            },
             splashColor: Colors.red,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),

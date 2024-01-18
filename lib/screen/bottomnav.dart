@@ -6,6 +6,7 @@ import 'package:audio/page/settings.dart';
 import 'package:audio/screen/carousal.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+
 class MyApp extends StatelessWidget {
   final AdaptiveThemeMode? savedThemeMode;
 
@@ -37,7 +38,8 @@ class MyApp extends StatelessWidget {
 }
 
 class BottomNavigationBarExample extends StatefulWidget {
-  const BottomNavigationBarExample({super.key, AdaptiveThemeMode? savedThemeMode});
+  const BottomNavigationBarExample(
+      {super.key, AdaptiveThemeMode? savedThemeMode});
 
   @override
   State<BottomNavigationBarExample> createState() =>
@@ -62,66 +64,64 @@ class _BottomNavigationBarExampleState
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-       
-        body: Center(
-          child: _widgetOptions.elementAt(_selectedIndex),
+    return Scaffold(
+      body: Center(
+        child: _widgetOptions.elementAt(_selectedIndex),
+      ),
+      bottomNavigationBar: Container(
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(0), topRight: Radius.circular(0)),
+          color: Color.fromARGB(255, 35, 60, 80),
         ),
-        bottomNavigationBar: Container(
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(0), topRight: Radius.circular(0)),
-            color: Color.fromARGB(255, 35, 60, 80),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 12),
-            child: GNav(
-              backgroundColor: const Color.fromARGB(255, 35, 60, 80),
-              color: Colors.white,
-              activeColor: Colors.white,
-              tabBackgroundColor: const Color.fromARGB(255, 7, 106, 187),
-              padding: const EdgeInsets.all(10),
-              onTabChange: (value) {
-                setState(() {
-                  _selectedIndex = value;
-                });
-              },
-              tabs: const [
-                GButton(
-                  //rippleColor: Color.fromARGB(255, 255, 17, 1),
-                  //hoverColor: Color.fromARGB(255, 255, 17, 1),
-                  gap: 8,
-                  icon: Icons.home,
-                  iconSize: 25,
-                  text: 'Home',
-                  textColor: Colors.white,
-                  textSize: 18,
-                ),
-                GButton(
-                  //rippleColor: Color.fromARGB(255, 255, 17, 1),
-                  //hoverColor: Color.fromARGB(255, 255, 17, 1),
-                  gap: 8,
-                  iconSize: 25,
-                  icon: Icons.audio_file_outlined,
-                  text: 'Audio',
-                  textColor: Colors.white,
-                  textSize: 18,
-                ),
-                GButton(
-                  // rippleColor: Color.fromARGB(255, 255, 17, 1),
-                  // hoverColor: Color.fromARGB(255, 255, 17, 1),
-                  gap: 8,
-                  iconSize: 25,
-                  icon: Icons.settings,
-                  text: 'Settings',
-                  textColor: Colors.white,
-                  textSize: 18,
-                ),
-              ],
-            ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 12),
+          child: GNav(
+            backgroundColor: const Color.fromARGB(255, 35, 60, 80),
+            color: Colors.white,
+            activeColor: Colors.white,
+            tabBackgroundColor: const Color.fromARGB(255, 7, 106, 187),
+            padding: const EdgeInsets.all(10),
+            onTabChange: (value) {
+              setState(() {
+                _selectedIndex = value;
+              });
+            },
+            tabs: const [
+              GButton(
+                //rippleColor: Color.fromARGB(255, 255, 17, 1),
+                //hoverColor: Color.fromARGB(255, 255, 17, 1),
+                gap: 8,
+                icon: Icons.home,
+                iconSize: 25,
+                text: 'Home',
+                textColor: Colors.white,
+                textSize: 18,
+              ),
+              GButton(
+                //rippleColor: Color.fromARGB(255, 255, 17, 1),
+                //hoverColor: Color.fromARGB(255, 255, 17, 1),
+                gap: 8,
+                iconSize: 25,
+                icon: Icons.audio_file_outlined,
+                text: 'Audio',
+                textColor: Colors.white,
+                textSize: 18,
+              ),
+              GButton(
+                // rippleColor: Color.fromARGB(255, 255, 17, 1),
+                // hoverColor: Color.fromARGB(255, 255, 17, 1),
+                gap: 8,
+                iconSize: 25,
+                icon: Icons.settings,
+                text: 'Settings',
+                textColor: Colors.white,
+                textSize: 18,
+              ),
+            ],
           ),
         ),
-      );
-    
+      ),
+    );
   }
 }

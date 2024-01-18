@@ -2,8 +2,9 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
-class Drum2 extends StatelessWidget {
-  Drum2({super.key});
+class Tabla extends StatelessWidget {
+  Tabla({super.key});
+
   List clrlist = [
     {
       "color": const RadialGradient(
@@ -178,10 +179,7 @@ class Drum2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
       appBar: AppBar(
-       
-        
         centerTitle: true,
         title: const Row(
           children: [
@@ -224,7 +222,8 @@ class Drum2 extends StatelessWidget {
               decoration: BoxDecoration(
                   // color: clrlist[index]["color"],
                   gradient: clrlist[index]["color"],
-                  image: DecorationImage(image: clrlist[index]["image"],fit: BoxFit.cover),
+                  image: DecorationImage(
+                      image: clrlist[index]["image"], fit: BoxFit.cover),
                   borderRadius: BorderRadius.circular(60)),
               child: Container(
                 constraints: const BoxConstraints(

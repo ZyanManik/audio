@@ -1,11 +1,10 @@
-import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:audio/widgets.dart/drumkit.dart';
 import 'package:audio/widgets.dart/tabla.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import '../widgets.dart/drum3.dart';
+import '../widgets.dart/electronic.dart';
 
 class Carousal extends StatefulWidget {
   const Carousal({super.key});
@@ -53,24 +52,9 @@ class _CarousalState extends State<Carousal> {
         ),
         elevation: 0,
         backgroundColor: const Color.fromARGB(255, 35, 60, 80),
-        actions: [
-          Switch(
-            value: AdaptiveTheme.of(context).mode.isDark,
-            onChanged: (value) {
-              if (value) {
-                AdaptiveTheme.of(context).setDark();
-              } else {
-                AdaptiveTheme.of(context).setLight();
-              }
-            },
-          ),
-        ],
       ),
       body: Stack(
         children: [
-
-      
-
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -93,7 +77,7 @@ class _CarousalState extends State<Carousal> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const Drum1(),
+                            builder: (context) => const DrumKit(),
                           ));
                     },
                   ),
@@ -112,7 +96,7 @@ class _CarousalState extends State<Carousal> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Drum2(),
+                            builder: (context) => Tabla(),
                           ));
                     },
                   ),
@@ -129,7 +113,7 @@ class _CarousalState extends State<Carousal> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Drum3(),
+                            builder: (context) => Electronic(),
                           ));
                     },
                   ),

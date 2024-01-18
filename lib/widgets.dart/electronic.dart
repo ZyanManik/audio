@@ -1,32 +1,19 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
-class Drum5 extends StatelessWidget {
-  Drum5({super.key});
+class Electronic extends StatelessWidget {
+  Electronic({super.key});
+
   List clrlist = [
-    {
-      "color": const Color.fromARGB(255, 49, 9, 117),
-    },
-    {
-      "color": const Color.fromARGB(255, 71, 33, 20),
-    },
-    {
-      "color": const Color.fromARGB(255, 217, 2, 255),
-    },
-    {
-      "color": const Color.fromARGB(255, 28, 78, 78),
-    },
-    {
-      "color": const Color.fromARGB(255, 82, 3, 96),
-    },
     {
       "color": const Color.fromARGB(255, 209, 18, 4),
     },
     {
-      "color": const Color.fromARGB(255, 3, 238, 11),
+      "color": const Color.fromARGB(255, 3, 93, 166),
     },
     {
-      "color": const Color.fromARGB(255, 135, 33, 33),
+      "color": const Color.fromARGB(255, 3, 238, 11),
     },
     {
       "color": const Color.fromARGB(255, 250, 188, 0),
@@ -35,19 +22,22 @@ class Drum5 extends StatelessWidget {
       "color": const Color.fromARGB(255, 3, 241, 126),
     },
     {
-      "color": const Color.fromARGB(255, 45, 59, 142),
-    },
-    {
-      "color": const Color.fromARGB(255, 112, 181, 34),
-    },
-    {
-      "color": const Color.fromARGB(255, 3, 93, 166),
-    },
-    {
-      "color": const Color.fromARGB(255, 131, 107, 196),
-    },
-    {
       "color": const Color.fromARGB(255, 167, 136, 25),
+    },
+    {
+      "color": const Color.fromARGB(255, 217, 2, 255),
+    },
+    {
+      "color": const Color.fromARGB(255, 243, 37, 37),
+    },
+    {
+      "color": const Color.fromARGB(255, 82, 3, 96),
+    },
+    {
+      "color": const Color.fromARGB(255, 135, 33, 33),
+    },
+    {
+      "color": const Color.fromARGB(255, 45, 59, 142),
     },
     {
       "color": const Color.fromARGB(255, 8, 127, 143),
@@ -57,19 +47,18 @@ class Drum5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 126, 121, 121),
       appBar: AppBar(
         centerTitle: true,
         title: const Row(
           children: [
             Text(
-              'Drum',
+              'Electronic',
               style: TextStyle(
                 color: Colors.white,
               ),
             ),
             Text(
-              '_5',
+              '_Drum',
               style: TextStyle(
                 color: Color.fromARGB(255, 255, 17, 1),
               ),
@@ -78,10 +67,7 @@ class Drum5 extends StatelessWidget {
         ),
         backgroundColor: const Color.fromARGB(255, 182, 181, 181),
         leading: InkWell(
-          child: const Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-          ),
+          child: const Icon(Icons.arrow_back_ios),
           onTap: () {
             Navigator.pop(context);
           },
@@ -89,23 +75,27 @@ class Drum5 extends StatelessWidget {
       ),
       body: GridView.builder(
         itemCount: clrlist.length,
-        padding: const EdgeInsets.only(top: 40, left: 10, right: 10, bottom: 0),
+        padding: const EdgeInsets.only(top: 50, left: 10, right: 10, bottom: 0),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4,
+            crossAxisCount: 3,
             crossAxisSpacing: 10.0,
-            mainAxisSpacing: 30.0,
-            childAspectRatio: 0.6),
+            mainAxisSpacing: 15.0,
+            childAspectRatio: 1.0),
         itemBuilder: (context, index) => SizedBox(
           child: MaterialButton(
-            onPressed: () {},
-            splashColor: Colors.grey,
+            onPressed: () async {
+              final player = AudioPlayer();
+              await player.play(AssetSource("DubstepClub${index + 1}.wav"));
+            },
+            splashColor: Colors.red,
             shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             padding: const EdgeInsets.all(0.0),
             child: Ink(
               decoration: BoxDecoration(
                   color: clrlist[index]["color"],
-                  borderRadius: BorderRadius.circular(10)),
+                  //  gradient: clrlist[index]['color'],
+                  borderRadius: BorderRadius.circular(30)),
               child: Container(
                 constraints: const BoxConstraints(
                     minWidth: 88.0,
